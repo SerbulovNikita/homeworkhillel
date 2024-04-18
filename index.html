@@ -7,17 +7,22 @@
 </head>
 <body>
     <script>
-        let userinput = prompt("Enter number");
-        if (userinput<1){
-            alert("Неправильне значення")
-        } else {
-            if(userinput == 1){
-                alert(userinput + " рік")
-            } else if(userinput>=2 && userinput<=4 ){
-                alert(userinput + " роки")
+        let userinput = prompt("Введіть число:");
+        let number = parseInt(userinput); // Конвертуємо введення в число
+
+        if (!isNaN(number) && number >= 0) { // Перевірка, чи є введення числом і чи є воно не від'ємним
+            let lastDigit = number % 10; // Остання цифра числа
+            let lastTwoDigits = number % 100; // Останні дві цифри числа
+
+            if (lastDigit === 1 && lastTwoDigits !== 11) {
+                alert(number + " рік");
+            } else if ((lastDigit === 2 , lastDigit === 3 , lastDigit === 4) && (lastTwoDigits !== 12 && lastTwoDigits !== 13 && lastTwoDigits !== 14)) {
+                alert(number + " роки");
             } else {
-                alert(userinput + " років")
+                alert(number + " років");
             }
+        } else {
+            alert("Неправильне значення. Будь ласка, введіть невід'ємне число.");
         }
     </script>
 </body>
