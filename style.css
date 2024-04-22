@@ -6,3 +6,7 @@
     border: none;
     cursor: pointer;
 }
+label,input{
+    display: block;
+    margin-bottom: 10px;
+}
