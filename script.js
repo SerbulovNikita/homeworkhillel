@@ -1,7 +1,7 @@
-function pow(x, y) {
+function pow(firstNumber, secondNumber) {
     let calculator = 1;
-    for (let i = 0; i < y; i++) {
-        calculator *= x;
+    for (let i = 0; i < secondNumber; i++) {
+        calculator *= firstNumber;
     }
     return calculator;
 }
